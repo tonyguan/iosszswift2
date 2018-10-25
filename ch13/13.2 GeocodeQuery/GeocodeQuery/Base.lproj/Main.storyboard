@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GeocodeQuery" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="249" text="输入查询地点关键字：" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWq-fS-fjL">
+                                <rect key="frame" x="31" y="38" width="170" height="20.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eBQ-Va-DFD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eBQ-Va-DFD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="eBQ-Va-DFD"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vSh-hX-q2K">
+                                <rect key="frame" x="29" y="72" width="261" height="31"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="3R4-E7-TFu"/>
+                                    <constraint firstAttribute="height" constant="30" id="B2l-fB-qpH"/>
+                                    <constraint firstAttribute="width" constant="261" id="YOg-lj-gJE"/>
+                                    <constraint firstAttribute="height" constant="31" id="Yzl-AJ-Uz0"/>
+                                    <constraint firstAttribute="height" constant="30" id="z7n-63-2HN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="B2l-fB-qpH"/>
+                                        <exclude reference="YOg-lj-gJE"/>
+                                        <exclude reference="z7n-63-2HN"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="3R4-E7-TFu"/>
+                                        <include reference="B2l-fB-qpH"/>
+                                        <include reference="YOg-lj-gJE"/>
+                                        <exclude reference="Yzl-AJ-Uz0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="B2l-fB-qpH"/>
+                                        <exclude reference="YOg-lj-gJE"/>
+                                        <include reference="z7n-63-2HN"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGr-md-CVB">
+                                <rect key="frame" x="31" y="136" width="259" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="KYa-JN-euD"/>
+                                    <constraint firstAttribute="width" constant="259" id="Omw-cw-abX"/>
+                                </constraints>
+                                <state key="normal" title="地理信息编码查询">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KYa-JN-euD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="KYa-JN-euD"/>
+                                        <exclude reference="Omw-cw-abX"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="geocodeQuery:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bw3-Jc-7sR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IWq-fS-fjL" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="28" id="1E7-xH-pEC"/>
+                            <constraint firstItem="vSh-hX-q2K" firstAttribute="leading" secondItem="IWq-fS-fjL" secondAttribute="leading" id="8Fw-4t-b89"/>
+                            <constraint firstItem="vSh-hX-q2K" firstAttribute="top" secondItem="IWq-fS-fjL" secondAttribute="bottom" constant="22" id="Bj8-Pe-rVE"/>
+                            <constraint firstItem="CGr-md-CVB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Cqb-tR-EvB"/>
+                            <constraint firstItem="vSh-hX-q2K" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="FAv-63-ZBS"/>
+                            <constraint firstItem="IWq-fS-fjL" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="FbS-yH-MV4"/>
+                            <constraint firstItem="vSh-hX-q2K" firstAttribute="centerX" secondItem="CGr-md-CVB" secondAttribute="centerX" id="Oe9-SB-Msv"/>
+                            <constraint firstItem="vSh-hX-q2K" firstAttribute="top" secondItem="IWq-fS-fjL" secondAttribute="bottom" constant="22" id="Um0-6W-m9t"/>
+                            <constraint firstItem="IWq-fS-fjL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="54" id="d3I-Dt-BX6"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="CGr-md-CVB" secondAttribute="bottom" constant="592" id="e2z-8h-rta"/>
+                            <constraint firstItem="IWq-fS-fjL" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="28" id="gFA-fw-Iwy"/>
+                            <constraint firstItem="CGr-md-CVB" firstAttribute="top" secondItem="vSh-hX-q2K" secondAttribute="bottom" constant="31" id="kZB-dE-myd"/>
+                            <constraint firstItem="IWq-fS-fjL" firstAttribute="leading" secondItem="vSh-hX-q2K" secondAttribute="leading" id="oVo-Yr-XwB"/>
+                            <constraint firstItem="CGr-md-CVB" firstAttribute="top" secondItem="vSh-hX-q2K" secondAttribute="bottom" constant="23" id="oxp-Im-W02"/>
+                            <constraint firstItem="CGr-md-CVB" firstAttribute="centerX" secondItem="vSh-hX-q2K" secondAttribute="centerX" id="rZd-P2-2mH"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="CGr-md-CVB" secondAttribute="bottom" constant="403" id="ukY-EN-jCZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="IWq-fS-fjL"/>
+                                <exclude reference="vSh-hX-q2K"/>
+                                <exclude reference="CGr-md-CVB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1E7-xH-pEC"/>
+                                <exclude reference="FbS-yH-MV4"/>
+                                <exclude reference="d3I-Dt-BX6"/>
+                                <exclude reference="gFA-fw-Iwy"/>
+                                <exclude reference="oVo-Yr-XwB"/>
+                                <exclude reference="8Fw-4t-b89"/>
+                                <exclude reference="Bj8-Pe-rVE"/>
+                                <exclude reference="FAv-63-ZBS"/>
+                                <exclude reference="Oe9-SB-Msv"/>
+                                <exclude reference="Um0-6W-m9t"/>
+                                <exclude reference="Cqb-tR-EvB"/>
+                                <exclude reference="kZB-dE-myd"/>
+                                <exclude reference="oxp-Im-W02"/>
+                                <exclude reference="rZd-P2-2mH"/>
+                                <exclude reference="e2z-8h-rta"/>
+                                <exclude reference="ukY-EN-jCZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="IWq-fS-fjL"/>
+                                <include reference="vSh-hX-q2K"/>
+                                <include reference="CGr-md-CVB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="FbS-yH-MV4"/>
+                                <include reference="8Fw-4t-b89"/>
+                                <include reference="Bj8-Pe-rVE"/>
+                                <include reference="FAv-63-ZBS"/>
+                                <include reference="oxp-Im-W02"/>
+                                <include reference="rZd-P2-2mH"/>
+                                <include reference="ukY-EN-jCZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="1E7-xH-pEC"/>
+                                <exclude reference="FbS-yH-MV4"/>
+                                <include reference="d3I-Dt-BX6"/>
+                                <exclude reference="gFA-fw-Iwy"/>
+                                <include reference="oVo-Yr-XwB"/>
+                                <exclude reference="8Fw-4t-b89"/>
+                                <exclude reference="Bj8-Pe-rVE"/>
+                                <exclude reference="FAv-63-ZBS"/>
+                                <include reference="Oe9-SB-Msv"/>
+                                <include reference="Um0-6W-m9t"/>
+                                <include reference="Cqb-tR-EvB"/>
+                                <include reference="kZB-dE-myd"/>
+                                <include reference="e2z-8h-rta"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="txtQueryKey" destination="vSh-hX-q2K" id="Wit-kg-1Gr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220.5" y="300"/>
+        </scene>
+    </scenes>
+</document>

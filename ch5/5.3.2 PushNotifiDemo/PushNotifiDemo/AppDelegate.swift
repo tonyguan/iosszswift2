@@ -1,0 +1,111 @@
+//
+//  AppDelegate.swift
+//  PushNotifiDemo
+//
+//  Created by 关东升 on 15/7/20.
+//  本书网站：http://www.51work6.com
+//  智捷课堂在线课堂：http://www.zhijieketang.com/
+//  智捷课堂微信公共号：zhijieketang
+//  作者微博：@tony_关东升
+//  作者微信：tony关东升
+//  QQ：569418560 邮箱：eorient@sina.com
+//  QQ交流群：162030268
+//
+
+import UIKit
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        var deleteAction = UIMutableUserNotificationAction()
+        deleteAction.identifier = "delete_action_id"
+        deleteAction.title = "Delete"
+        deleteAction.activationMode = UIUserNotificationActivationMode.Background
+        deleteAction.destructive = true
+        
+        var replyAction = UIMutableUserNotificationAction()
+        replyAction.identifier = "reply_action_id"
+        replyAction.title = "Reply"
+        replyAction.activationMode = UIUserNotificationActivationMode.Background
+        replyAction.destructive = false
+        
+        var deleteReplyCategory = UIMutableUserNotificationCategory()
+        deleteReplyCategory.identifier = "custom_category_id"
+        deleteReplyCategory.setActions([deleteAction, replyAction], forContext: UIUserNotificationActionContext.Default)
+        
+        var categories : Set<UIMutableUserNotificationCategory> = [deleteReplyCategory]
+
+        //注册接收通知类型
+        var settings = UIUserNotificationSettings(forTypes:
+                                UIUserNotificationType.Badge
+                                | UIUserNotificationType.Sound
+                                | UIUserNotificationType.Alert, categories: categories)
+       
+        application.registerUserNotificationSettings(settings)
+        
+        return true
+    }
+
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        application.registerForRemoteNotifications()
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        
+        NSLog("设备令牌: %@", deviceToken)
+        var tokenString = deviceToken.description
+        var charsets = NSCharacterSet(charactersInString: "<>")
+        tokenString = tokenString.stringByTrimmingCharactersInSet(charsets)
+        tokenString = tokenString.stringByReplacingOccurrencesOfString(" ", withString: "")
+        NSLog("处理后的设备令牌: %@", tokenString)
+        
+        //设备令牌发送给服务器
+        
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+        
+        if identifier == "delete_action_id" {
+            NSLog("Delete被单击")
+        } else if identifier == "reply_action_id" {
+            NSLog("Reply被单击")
+        }
+        
+        //completionHandler()
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        NSLog("error : %@",error.localizedDescription)
+    }
+    
+    
+    func applicationWillResignActive(application: UIApplication) {
+        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    }
+
+    func applicationDidEnterBackground(application: UIApplication) {
+        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    }
+
+    func applicationWillEnterForeground(application: UIApplication) {
+        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    }
+
+    func applicationDidBecomeActive(application: UIApplication) {
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    }
+
+    func applicationWillTerminate(application: UIApplication) {
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+
+}
+

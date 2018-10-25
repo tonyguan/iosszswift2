@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LocalNotifi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mr0-5Q-P8f">
+                                <rect key="frame" x="205" y="198" width="191" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="pEW-gJ-Kii"/>
+                                    <constraint firstAttribute="width" constant="191" id="x0w-Qd-QlU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="立刻发送通知">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nowStart:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U7F-3e-toJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVu-eC-XbC">
+                                <rect key="frame" x="205" y="134" width="191" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9Dq-Ag-J95"/>
+                                    <constraint firstAttribute="width" constant="191" id="en8-2c-77G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="停止所有计划通知">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scheduleEnd:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gek-mL-oke"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zk3-3R-zRq">
+                                <rect key="frame" x="205" y="71" width="191" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UCI-PX-otT"/>
+                                    <constraint firstAttribute="width" constant="191" id="h0j-Ls-HwS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="计划通知开始">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scheduleStart:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cPd-rU-bsj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zk3-3R-zRq" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="51" id="Lru-9g-b9x"/>
+                            <constraint firstItem="mr0-5Q-P8f" firstAttribute="top" secondItem="KVu-eC-XbC" secondAttribute="bottom" constant="20" id="M66-Gu-2cS"/>
+                            <constraint firstAttribute="centerX" secondItem="KVu-eC-XbC" secondAttribute="centerX" id="Yj7-65-aIH"/>
+                            <constraint firstItem="KVu-eC-XbC" firstAttribute="top" secondItem="zk3-3R-zRq" secondAttribute="bottom" constant="19" id="arq-CL-Azx"/>
+                            <constraint firstAttribute="centerX" secondItem="mr0-5Q-P8f" secondAttribute="centerX" id="lKa-oV-WDw"/>
+                            <constraint firstAttribute="centerX" secondItem="zk3-3R-zRq" secondAttribute="centerX" id="vUQ-5F-ZIN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

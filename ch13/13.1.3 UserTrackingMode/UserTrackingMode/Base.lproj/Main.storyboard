@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="UserTrackingMode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZHq-2N-4IR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZHq-2N-4IR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="08v-hA-52z"/>
+                            <constraint firstItem="ZHq-2N-4IR" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="8Ce-fz-bmZ"/>
+                            <constraint firstAttribute="trailing" secondItem="ZHq-2N-4IR" secondAttribute="trailing" id="C9T-GM-JFt"/>
+                            <constraint firstItem="ZHq-2N-4IR" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="DCZ-bD-CGb"/>
+                            <constraint firstItem="ZHq-2N-4IR" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="FFd-9R-JUb"/>
+                            <constraint firstItem="ZHq-2N-4IR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="MOL-5W-K8U"/>
+                            <constraint firstItem="ZHq-2N-4IR" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="QQf-40-vCA"/>
+                            <constraint firstAttribute="trailing" secondItem="ZHq-2N-4IR" secondAttribute="trailing" id="sD1-23-rJa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ZHq-2N-4IR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="08v-hA-52z"/>
+                                <exclude reference="8Ce-fz-bmZ"/>
+                                <exclude reference="C9T-GM-JFt"/>
+                                <exclude reference="DCZ-bD-CGb"/>
+                                <exclude reference="FFd-9R-JUb"/>
+                                <exclude reference="MOL-5W-K8U"/>
+                                <exclude reference="QQf-40-vCA"/>
+                                <exclude reference="sD1-23-rJa"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ZHq-2N-4IR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="C9T-GM-JFt"/>
+                                <include reference="DCZ-bD-CGb"/>
+                                <include reference="MOL-5W-K8U"/>
+                                <include reference="QQf-40-vCA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="08v-hA-52z"/>
+                                <include reference="8Ce-fz-bmZ"/>
+                                <include reference="FFd-9R-JUb"/>
+                                <include reference="sD1-23-rJa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ZHq-2N-4IR" id="3f5-02-0EM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="429"/>
+        </scene>
+    </scenes>
+</document>

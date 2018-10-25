@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>com.51work6.IAPDemo6.map</string>
+	<string>com.51work6.IAPDemo6.tool</string>
+	<string>com.51work6.IAPDemo6.elves</string>
+	<string>com.51work6.IAPDemo6.equipment</string>
+</array>
+</plist>

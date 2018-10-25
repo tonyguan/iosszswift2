@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  NewsstandDemo
+//
+//  Created by tonyguanpro on 15/7/22.
+//  Copyright (c) 2015年 tonyguan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Foundation/Foundation.h>
+
+#endif

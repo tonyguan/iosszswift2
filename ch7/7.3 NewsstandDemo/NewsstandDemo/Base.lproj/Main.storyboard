@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="NewsstandDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mr4-fc-udC">
+                                <rect key="frame" x="201" y="371" width="199" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="cHz-Vr-cvJ"/>
+                                    <constraint firstAttribute="height" constant="41" id="koN-2L-514"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="下载">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onclick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dWM-QK-3pb"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gB-8B-GJH">
+                                <rect key="frame" x="188" y="28" width="225" height="289"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="289" id="KKK-CD-qdt"/>
+                                    <constraint firstAttribute="width" constant="225" id="Wgg-PS-Khy"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="b8D-5Y-4a9">
+                                <rect key="frame" x="281" y="202" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJ1-LQ-Xx1">
+                                <rect key="frame" x="201" y="391" width="199" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xJ1-LQ-Xx1" firstAttribute="leading" secondItem="mr4-fc-udC" secondAttribute="leading" id="597-r9-CWH"/>
+                            <constraint firstItem="b8D-5Y-4a9" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="182" id="7a8-Jw-s14"/>
+                            <constraint firstAttribute="centerX" secondItem="7gB-8B-GJH" secondAttribute="centerX" id="Nra-9J-g8R"/>
+                            <constraint firstItem="7gB-8B-GJH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Uty-2A-xRe"/>
+                            <constraint firstAttribute="centerX" secondItem="xJ1-LQ-Xx1" secondAttribute="centerX" id="a5C-t9-QJp"/>
+                            <constraint firstItem="mr4-fc-udC" firstAttribute="top" secondItem="7gB-8B-GJH" secondAttribute="bottom" constant="54" id="bHc-m2-n0q"/>
+                            <constraint firstAttribute="centerX" secondItem="mr4-fc-udC" secondAttribute="centerX" id="iyl-un-sjW"/>
+                            <constraint firstItem="xJ1-LQ-Xx1" firstAttribute="top" secondItem="7gB-8B-GJH" secondAttribute="bottom" constant="74" id="rPf-wb-xnr"/>
+                            <constraint firstAttribute="centerX" secondItem="b8D-5Y-4a9" secondAttribute="centerX" id="ug0-d4-jtk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="b8D-5Y-4a9" id="ojU-3B-hZV"/>
+                        <outlet property="button" destination="mr4-fc-udC" id="T1X-gA-66Z"/>
+                        <outlet property="imageView" destination="7gB-8B-GJH" id="7C3-UE-jNb"/>
+                        <outlet property="progressView" destination="xJ1-LQ-Xx1" id="eeC-uq-7gZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
